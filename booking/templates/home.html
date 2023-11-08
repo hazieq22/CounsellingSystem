@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPMB Counsellor</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'homepage.css' %}">
+</head>
+<body>
+    <header>
+        <img class="logo" src="{% static 'LogoKPM.png' %}" alt="">
+        <nav>
+            <ul class="nav__links">
+                <li><a href ="{% url 'home' %}"><b>HOME</b></a></li>
+                <li><a href ="{% url 'booking' %}"><b>BOOKING</b></a></li>
+                <li><a href ="{% url 'appointment' %}"><b>APPOINTMENT</b></a></li>
+                <li><a href ="{% url 'homepage' %}"><b>LOGOUT</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+    <div class="container">
+        <img src="{% static 'cover.jpg' %}" alt="img">
+        <div class="text">
+            <p class="p1"><b>YOUR STORY MATTERS,<br>LET IT BE HEARD.</b></p>
+            <p class="p2"><b>BOOK YOUR APPOINTMENT NOW TO HAVE A COUNSELLING SESSION WITH US</b></p>
+        </div>
+    </div>
+    </section>
+    <section class="box">
+        <section class="steps">
+            <p class="howtobook">How To Book</p>
+            <p>Access online counselling anytime,To have book a with counsellor</p>
+            <div class="row">
+                <div class ="step1">
+                    <p>Step 1:</p>
+                    <p><b>Book A Date</b></p>
+                    <img src="{%static 'step1.png' %}">
+                    <p>Select the date to view the availability of a Counsellor.</p>
+                </div>
+                <div class ="step2">
+                    <p>Step 2:</p>
+                    <p><b>Approval</b></p>
+                    <img src="{%static 'step2.png' %}">
+                    <p>You need to wait for approval before having a <br>session with counsellor.</p>
+                </div>
+                <div class ="step3">
+                    <p>Step 3:</p>
+                    <p><b>Attend Session</b></p>
+                    <img src="{%static 'step3.png' %}" width="276px" height="272px">
+                    <p>Once your booking is approved.<br>You can go meet up with your counsellor for a session.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+</html>

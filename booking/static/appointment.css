@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma,sans-serif;
+}
+
+li , a{
+    font-weight: 500;
+    font-size: 16px;
+    color: #4a4949;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 80px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+    cursor: pointer;
+    width: 90px;
+    height: 80px;
+    margin-right: auto;
+    background: white;
+}
+
+.nav__links{
+    list-style: none;
+    background: white;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 40px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease;
+}
+
+.nav__links li a:hover {
+    color: rgb(245, 93, 93);
+}
+/*----------------------------*/
+.container{
+    margin-left: 50px;
+    max-width: 90%;
+    margin-top: 30px;
+}
+.container form{
+    width: 105%;
+    height: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+.table-box{
+        margin: 50px auto;
+        padding-left: 40px;
+}
+.table-box2{
+    padding-left: 40px;
+}
+.table-row{
+    display: table;
+    width: 50%;
+    margin: 10px auto;
+    font-family: sans-serif;
+    background: transparent;
+    padding: 12px 0;
+    color: #555;
+    font-size: 13px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,50,0.3);
+}
+.table-row2{
+    display: table;
+    width: 50%;
+    margin: 10px auto;
+    font-family: sans-serif;
+    background: transparent;
+    padding: 12px 0;
+    color: #555;
+    font-size: 13px;
+}
+.table-cell{
+    display: table-cell;
+    width: 12.5%;
+    text-align: center;
+    padding: 4px 0;
+    border-right: 1px solid #d6d4d4;
+    vertical-align: middle;
+}
+.table-cell2{
+    display: table-cell;
+    width: 20%;
+    text-align: center;
+    padding: 4px 0;
+    vertical-align: middle;
+}
+.table-head{
+    background:#fff3f3;
+    color: #353535;
+    font-weight: 600;
+}
+.table-head2{
+    color: #353535;
+    font-weight: 600;
+}
+
+.container form h1{
+    text-align: center;
+    margin-bottom: 24px;
+    color: #da5252;
+}
+.container form input{
+    text-align: center;
+    margin-bottom: 24px;
+    align-items: center;
+}
+.container form .form-control{
+    width: 30%;
+    height: 30px;
+    background: white;
+    border-radius: 4px;
+    margin : 10px 0 18px 0;
+    padding: 0 10px;
+}
+.container .box{
+    width: 100px;
+    height: 100px;
+    color: #da5252;
+    display: inline;
+    padding-left: 510px;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(152, 152, 152);
+    border:2px solid gray;
+    padding :5px 20px;
+    font-size:14px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    border-radius: 3px;
+}

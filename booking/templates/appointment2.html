@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'appointment.css' %}">
+</head>
+<body>
+    <header>
+        <img class="logo" src="{% static 'LogoKPM.png' %}" alt="">
+        <nav>
+            <ul class="nav__links">
+                <li><a href ="{% url 'appointment2' %}"><b>APPOINTMENT</b></a></li>
+                <li><a href ="{% url 'homepage' %}"><b>LOGOUT</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+    <form action="" method="GET">
+        <h1>Manage Appointment</h1>
+        <div class="container">
+            <div class="table-box">
+                <div class="table-row table-head">
+                    <div class="table-cell">
+                    <p>Session ID</p>
+                    </div>
+                    <div class="table-cell">
+                    <p>Student ID</p>
+                    </div>
+                    <div class="table-cell">
+                    <p>Date</p>
+                    </div>
+                    <div class="table-cell">
+                    <p>Time</p>
+                    </div>
+                    <div class="table-cell">
+                    <p>Status</p>
+                    </div>
+                    <div class="table-cell">
+                    <p>Update</p>
+                    </div>
+                    <div class="table-cell">
+                    <p>Delete</p>
+                    </div>
+                    <div class="table-cell">
+                    <p>Records</p>
+                    </div>
+                </div>
+                {% for post in posts %}
+                <div class="table-row">
+                    <div class="table-cell">
+                    <p>{{post.sessionID}}</p>
+                    </div>
+                    <div class="table-cell">
+                    <p>{{post.studentID.studentID}}</p>
+                    </div>
+                    <div class="table-cell">
+                    <p>{{post.date}}</p>
+                    </div>
+                    <div class="table-cell">
+                    <p>{{post.time}}</p>
+                    </div>
+                    <div class="table-cell">
+                    <p>{{post.status}}</p>
+                    </div>
+                    <div class="table-cell">
+                    <p><a href="update/{{post.sessionID}}">Details</a></p>
+                    </div>
+                    <div class="table-cell">
+                    <p><a href="delete/{{post.sessionID}}">Delete</a></p>
+                    </div>
+                    <div class="table-cell">
+                    <p><a href="update2/{{post.sessionID}}">View</a></p>
+                    </div>
+                </div>
+                {% endfor %}
+        </div>
+    </form>
+    </div>
+</body>
+</html>

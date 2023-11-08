@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPMB Counsellor</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'homepage.css' %}">
+</head>
+<body>
+    <header>
+        <img class="logo" src="{% static 'LogoKPM.png' %}" alt="">
+        <nav>
+            <ul class="nav__links">
+                <li><a href ="{% url 'home' %}"><b>HOME</b></a></li>
+                <li><a href ="{% url 'booking' %}"><b>BOOKING</b></a></li>
+                <li><a href ="{% url 'appointment' %}"><b>APPOINTMENT</b></a></li>
+                <li><a href ="{% url 'homepage' %}"><b>LOGOUT</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+    <div class="container">
+        <img src="{% static 'cover.jpg' %}" alt="img">
+        <div class="text">
+            <p class="p1"><b>YOUR STORY MATTERS,<br>LET IT BE HEARD.</b></p>
+            <p class="p2"><b>BOOK YOUR APPOINTMENT NOW TO HAVE A COUNSELLING SESSION WITH US</b></p>
+        </div>
+    </div>
+    </section>
+    <section>
+        <div class="popup">
+            <div class="popup-content">
+                <img src="{%static 'icon.png' %}" alt="icon" width="70px" height="70px">
+                <form id="loginForm" method="post">
+                    {% csrf_token %}
+                    <input id=input type="text" placeholder="ID number" name="search2">
+                    <input id=password type="password" placeholder="Password" name="password">
+                    <input type="submit" class ="button" value="LOGIN" >
+                </form>
+            </div>
+        </div>
+        <script>
+            document.getElementById("button").addEventListener("click",function(){
+                document.querySelector(".popup").style.display ="none"
+            })
+        </script>
+    </section>
+</body>
+</html>
