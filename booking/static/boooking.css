@@ -68,7 +68,7 @@ header{
     color: rgb(37, 35, 35);
 }
 .container form .form-control{
-    width: 40%;
+    width: 70%;
     height: 30px;
     background: white;
     border-radius: 4px;
@@ -87,10 +87,15 @@ header{
     box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
     cursor: pointer;
     margin-bottom: 20px;
+    position: relative;
+    left: 130px;
 }
 body{
     background: rgba(245,246,255,255)
 }
 .gerak{
     padding-left: 26%;
+}
+.form-group{
+    padding-left: 50px;
 }
